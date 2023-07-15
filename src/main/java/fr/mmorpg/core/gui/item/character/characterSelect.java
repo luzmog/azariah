@@ -6,6 +6,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class characterSelect extends MenuItem {
     public characterSelect(String name, String[] lore) {
         super(name, new ItemStack(Material.PAPER), lore);

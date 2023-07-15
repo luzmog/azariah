@@ -1,7 +1,6 @@
 package fr.mmorpg.core.gui;
 
 import fr.mmorpg.core.Core;
-import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 

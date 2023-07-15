@@ -58,4 +58,8 @@ public class Character {
     public Integer getLevel() {
         return this.level;
     }
+
+    public RPGRace getRace() {
+        return this.RPGRace;
+    }
 }
