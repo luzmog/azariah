@@ -4,6 +4,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
+import fr.mmorpg.core.Core;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,11 +14,14 @@ public class DatabaseManager {
     private MongoClient mongoClient;
     private MongoDatabase database;
     private ProfilManager profilManager;
-    public DatabaseManager(String username, String password, String host, int port, String dbName) {
+    private Core core;
+
+    public DatabaseManager(String username, String password, String host, int port, String dbName, Core core) {
         String connectionString = String.format("mongodb://%s:%s@%s:%d/%s", username, password, host, port, dbName);
         this.mongoClient = MongoClients.create(connectionString);
         this.database = mongoClient.getDatabase(dbName);
        // database.createCollection("profiles");
+        this.core = core;
         this.profilManager = new ProfilManager(this.database);
     }
 

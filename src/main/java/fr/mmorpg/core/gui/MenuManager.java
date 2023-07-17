@@ -11,20 +11,15 @@ import java.util.HashMap;
 
 public class MenuManager implements MenuHandler {
 
-    public HashMap<Integer,Menu> menu = new HashMap<>(); // HashMap Constructor
 
-    private int id = -1;
 
-    @Override
-    public void onLoadMenu() {
-        characterMenu.id = registerNewMenu(new characterMenu());
-    }
+
 
 
     @Override
     public Integer registerNewMenu(Menu menu) {
         id++;
-        getMenu().put(id, menu);
+        menu.put(id, menu);
         return id;
     }
 

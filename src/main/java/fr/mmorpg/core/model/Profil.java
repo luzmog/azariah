@@ -58,6 +58,10 @@ public class Profil {
     public void unLoadCharacter(){
          loadCharacter = null;
     }
+
+    public void setCharacter(String name){
+
+    }
     public void setLoadCharacter(Character loadCharacter) {
         this.loadCharacter = loadCharacter;
     }

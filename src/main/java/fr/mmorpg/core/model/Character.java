@@ -2,11 +2,23 @@ package fr.mmorpg.core.model;
 
 import org.bukkit.Location;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Character {
 
     private String name;
     private Integer level;
     private Integer exp;
+
+    //private Coffre coffre;
+
+    // Class Coffre
+    // Character private list<coffre> coffres;
+
+    List<ChestExtension> chestExtensionList;
+
+    // 1-4
     private Integer expToNextLevel;
 
     private Location location;
@@ -23,7 +35,21 @@ public class Character {
         this.expToNextLevel = 1000;  // The experience needed to reach the next level
         this.RPGClass = rpgClass;
         this.RPGRace = rpgRace;
-    }
+
+
+        // get from data base, if no data, :
+        chestExtensionList = new ArrayList<>();
+
+
+        ChestExtension test = new ChestExtension();
+
+
+        //loadChest(test);
+        //loadChest(test);
+
+   }
+
+
 
     // Getters and Setters...
 
@@ -62,4 +88,6 @@ public class Character {
     public RPGRace getRace() {
         return this.RPGRace;
     }
+
+    // Get coffre by slot
 }
